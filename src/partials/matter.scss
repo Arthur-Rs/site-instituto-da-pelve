@@ -1,0 +1,93 @@
+.matter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: $white;
+
+  h2 {
+    font-weight: 400;
+    letter-spacing: 0.8rem;
+    font-size: 6.4rem;
+    align-self: flex-start;
+    margin: 10rem 10rem 5rem;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10rem;
+    width: 100%;
+    flex-wrap: wrap;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 55rem;
+      background: $primary;
+      border-radius: 1rem;
+      
+      img {
+        padding: 2rem;
+        width: 40rem;
+        border-radius: 1rem;
+      }
+
+      span {
+        font-size: 2.4rem;
+      }
+
+      a {
+        font-size: 2.4rem;
+        color: $white;
+        padding: 2rem 8rem;
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+        border: solid 2px $white;
+        text-decoration: none;
+        transition: all 0.2s;
+
+        &:hover {
+          color: $primary;
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile) {
+    h2 {
+      margin: 3rem 0;
+      font-size: 3.6rem;
+      align-self: center;
+    }
+
+    > div {
+      flex-direction: column;
+      padding: 0 4rem;
+
+      div {
+        height: 42rem;
+
+        & + div {
+          margin-top: 2.5rem;
+        }
+
+        span {
+          font-size: 2rem;
+        }
+
+        img{
+          padding: 3rem;
+          width: 30rem;
+        }
+        
+        a{
+          padding: 1rem 6rem;
+          border-radius: 1.3rem;
+        }
+      }
+    }
+  }
+}

@@ -5,7 +5,7 @@
   "author": "Arthur-Rs <arthurreis074@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "babel": "babel ./src/index.ts -o ./build/script.js --watch",
+    "babel": "babel -w ./src/index.ts -o ./build/script.js  ",
     "sass": "sass --watch ./src/index.scss ./build/style.css --no-source-map --no-indented  --style compressed"
   },
   "devDependencies": {
@@ -20,6 +20,7 @@
     "eslint": "^7.12.1",
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.1",
+    "gh-pages": "^3.1.0",
     "sass": "^1.28.0",
     "typescript": "^4.0.5"
   }
