@@ -1,0 +1,130 @@
+body header {
+  z-index: 16;
+  background: $white;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  top: 0;
+  position: fixed;
+
+  width: 100%;
+
+  h1 {
+    font-size: 3.2rem;
+    margin: 0.6rem 0;
+    letter-spacing: 1.2rem;
+  }
+
+  button {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+
+    span {
+      font-size: 1.8rem;
+      position: relative;
+      text-align: center;
+      padding: 0 2.4rem;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+
+      & + span:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        left: 0;
+
+        background: $black;
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    & {
+      flex-direction: column-reverse;
+      top: -24rem;
+      transition: top 0.35s;
+      height: auto;
+
+      &.open {
+        top: 0 !important;
+      }
+
+      div {
+        width: 100%;
+        height: 6.4rem;
+        padding: 0 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1 {
+          font-size: 1.8rem;
+          letter-spacing: 0;
+        }
+
+        button {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          border: none;
+          background: none;
+          width: 2.4rem;
+          height: 1.6rem;
+
+          span {
+            transition: 0.3s;
+            width: 100%;
+            height: 2px;
+            background: $black;
+          }
+
+          &.close {
+            span:first-child {
+              opacity: 0;
+            }
+
+            span:nth-child(2) {
+              transform: rotateZ(45deg) translateY(4.5px);
+            }
+
+            span:nth-child(3) {
+              transform: rotateZ(-45deg) translateY(-4.5px);
+            }
+          }
+        }
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background: $gray-light;
+        margin: 0;
+
+        height: 24rem;
+        width: 100%;
+
+        span {
+          padding: 0.8rem 0.2rem;
+
+          & + span:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
