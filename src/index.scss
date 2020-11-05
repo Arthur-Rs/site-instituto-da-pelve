@@ -1,0 +1,91 @@
+// Variables
+
+$primary-dark: #d09680;
+$primary: #efcbbd;
+$primary-light: #fbefec;
+$gray: #cabfbd;
+$white: #fefefe;
+$black: #191919;
+
+// Globals
+
+:root {
+  font-size: 62.5%;
+
+  @media(max-width: 900px){
+    &{
+      font-size: 58%;
+    }
+  }
+
+  @media(max-width: 720){
+    &{
+      font-size: 56%;
+    }
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $black;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+// Header
+
+header {
+  background: $white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 3.2rem;
+    margin: 1.8rem 0;
+    letter-spacing: 1.2rem;
+  }
+
+  nav {
+    display: flex;
+    margin-bottom: 1.8rem;
+
+    span {
+      font-size: 1.8rem;
+      position: relative;
+      text-align: center;
+      padding: 0 2.4rem;
+      cursor: pointer;
+
+      &:hover{
+        text-decoration: underline;
+        opacity: 0.8;
+      }
+
+      & + span:before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 100%;
+        left: 0;
+
+        background: $black;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+
+  .home {
+    background: $primary-light;
+    height: 100vh;
+    width: 100vw;
+  }
+}
