@@ -11,9 +11,12 @@ const sections = {
   home: document.querySelector('.home') as HTMLDivElement,
   about: document.querySelector('.about') as HTMLDivElement,
   matter: document.querySelector('.matter') as HTMLDivElement,
+  office: document.querySelector('.office') as HTMLDivElement,
+  comment: document.querySelector('.comment') as HTMLDivElement,
+  contact: document.querySelector('.contact') as HTMLDivElement,
 }
 
-type keysSections = 'home' | 'about' | 'matter'
+type keysSections = 'home' | 'about' | 'matter' | 'office' | 'contact' | 'comment'
 
 const toggleHeader = () => {
   btnHeader.classList.toggle('close')

@@ -2,7 +2,7 @@
 
 $primary-dark: #d09680;
 $primary: #efcbbd;
-$primary-alpha: #efcbbda4;
+$primary-alpha: #efcbbdbb;
 $primary-light: #fbefec;
 $gray: #cabfbd;
 $gray-light: #efefef;
@@ -40,6 +40,9 @@ $mobile: 800px;
     font-size: 39%;
   }
 
+  @media (max-width: 300px) {  
+    font-size: 36%;
+  }
 }
 
 * {
@@ -68,11 +71,29 @@ body main {
       center;
     background-size: 60rem;
     height: 60rem;
-    width: 100vw;
+    width: 100%;
   }
 
   @import "./partials/about.scss";
   @import "./partials/matter.scss";
+  @import "./partials/office.scss";
+  @import "./partials/comment.scss";
+  @import "./partials/contact.scss";
+
+  footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 8rem;
+    background: $primary-dark;
+    z-index: 0;
+  
+    span{
+      font-size: 1.8rem;
+      font-weight: 500;
+    }
+  }
 
   @media (max-width: $mobile) {
     margin-top: 8rem;
@@ -95,3 +116,4 @@ body main {
     }
   }
 }
+

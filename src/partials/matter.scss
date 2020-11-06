@@ -5,17 +5,19 @@
   align-items: center;
   position: relative;
   background: $white;
+  padding-bottom: 5rem;
 
-  > img{
+  > img {
     position: absolute;
-    width: 35rem;
+    width: 25rem;
+    z-index: 4;
 
-    &:nth-child(1){
-      top: -35rem;
+    &:nth-child(1) {
+      top: -10rem;
       right: 0;
     }
 
-    &:nth-child(2){
+    &:nth-child(2) {
       bottom: -15rem;
       width: 15rem;
       left: 0;
@@ -27,7 +29,7 @@
     letter-spacing: 0.8rem;
     font-size: 4.8rem;
     align-self: flex-start;
-    margin: 10rem 15rem 5rem;
+    margin: 5rem 15rem 5rem;
   }
 
   > div {
@@ -92,15 +94,15 @@
     }
 
     > img {
-      &:nth-child(1){
+      &:nth-child(1) {
         width: 20rem;
-        top: 0rem;
+        top: 0;
         right: 0;
       }
-  
-      &:nth-child(2){
+
+      &:nth-child(2) {
         width: 15rem;
-        bottom: 0rem;
+        bottom: -8rem;
         left: 0;
       }
     }
@@ -108,23 +110,21 @@
     > div {
       flex-direction: column;
       padding: 0 4rem;
-      
+
       > div {
         width: 40rem;
         height: 60rem;
         align-self: center;
-        
-        & + div{
 
+        & + div {
           margin-top: 2.5rem;
         }
 
         > div {
-
           span {
             font-size: 2.2rem;
           }
-  
+
           img {
             width: 40rem;
             padding: 3rem;
