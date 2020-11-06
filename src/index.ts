@@ -1,4 +1,5 @@
-//#region Variables
+const headerDesktop = document.querySelector('header') as HTMLDivElement
+const headerMobile = document.querySelector('header > div') as HTMLDivElement
 
 const btnHeader = document.querySelector('#btn-header') as Element
 const header = document.querySelector('header') as Element
@@ -6,19 +7,13 @@ const main = document.querySelector('main') as HTMLDivElement
 
 const HeaderButtons = document.querySelectorAll<HTMLSpanElement>('header nav span') 
 
-const Sections = {
+const sections = {
   home: document.querySelector('.home') as HTMLDivElement,
   about: document.querySelector('.about') as HTMLDivElement,
   matter: document.querySelector('.matter') as HTMLDivElement,
 }
 
 type keysSections = 'home' | 'about' | 'matter'
-
-const offsetHeight = Sections.home.offsetTop
-
-//#endregion
-
-//#region Functions
 
 const toggleHeader = () => {
   btnHeader.classList.toggle('close')
@@ -27,21 +22,21 @@ const toggleHeader = () => {
 }
 
 const scrollToSection = (sectionName:keysSections ) => {
-  const Section = Sections[sectionName]
-  const positionSection = Section.offsetTop - offsetHeight
+  const Section = sections[sectionName]
+
+  const headerHeight = innerWidth <= 800
+    ? headerMobile.clientHeight
+    : headerDesktop.clientHeight
+
+  const positionSection = Section.offsetTop - headerHeight
 
   scrollTo({
     top: positionSection,
     behavior: 'smooth'
-
   })
 
   toggleHeader()
 }
-
-//#endregion
-
-//#region Events
 
 HeaderButtons.forEach((button)=>{
   button.addEventListener('click', () => {
@@ -50,5 +45,3 @@ HeaderButtons.forEach((button)=>{
 })
 
 btnHeader.addEventListener('click', toggleHeader)
-
-//#endregion

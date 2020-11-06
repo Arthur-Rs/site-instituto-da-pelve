@@ -2,6 +2,7 @@
 
 $primary-dark: #d09680;
 $primary: #efcbbd;
+$primary-alpha: #efcbbda4;
 $primary-light: #fbefec;
 $gray: #cabfbd;
 $gray-light: #efefef;
@@ -32,7 +33,11 @@ $mobile: 800px;
   }
 
   @media (max-width: 400px) {  
-    font-size: 46%;
+    font-size: 44%;
+  }
+
+  @media (max-width: 350px) {  
+    font-size: 39%;
   }
 
 }
@@ -55,10 +60,14 @@ body main {
   margin-top: 11.8rem;
 
   .home {
-    background: $primary-light url("./assets/background-home.png") no-repeat top
-      15rem center;
+    background: $primary-light 
+      url("./assets/background-home.png") 
+      no-repeat 
+      top
+      15rem 
+      center;
     background-size: 60rem;
-    height: 90rem;
+    height: 60rem;
     width: 100vw;
   }
 
@@ -66,17 +75,21 @@ body main {
   @import "./partials/matter.scss";
 
   @media (max-width: $mobile) {
-    margin-top: 6.4rem;
+    margin-top: 8rem;
     transition: margin-top 0.35s, filter 0.35s;
 
     &.header-open {
-      margin-top: calc(22rem + 6.4rem);
+      margin-top: calc(22rem + 8rem);
       filter: brightness(0.4);
     }
 
     .home {
-      background: $primary-light url("./assets/background-home.png") no-repeat
-        top 10em center;
+      background: $primary-light 
+        url("./assets/background-home.png") 
+        no-repeat
+        top 
+        10em 
+        center;
       background-size: 30rem;
       height: 45rem;
     }

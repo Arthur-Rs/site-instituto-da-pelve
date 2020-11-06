@@ -63,7 +63,7 @@ body header {
 
       div {
         width: 100%;
-        height: 6.4rem;
+        height: 8rem;
         padding: 0 1.6rem;
         display: flex;
         align-items: center;
@@ -81,8 +81,8 @@ body header {
           justify-content: space-between;
           border: none;
           background: none;
-          width: 2.4rem;
-          height: 1.6rem;
+          width: 22px;
+          height: 16px;
 
           span {
             transition: 0.3s;
@@ -97,11 +97,11 @@ body header {
             }
 
             span:nth-child(2) {
-              transform: rotateZ(45deg) translateY(4.5px);
+              transform: rotateZ(45deg) translateY(5px);
             }
 
             span:nth-child(3) {
-              transform: rotateZ(-45deg) translateY(-4.5px);
+              transform: rotateZ(-45deg) translateY(-5px);
             }
           }
         }

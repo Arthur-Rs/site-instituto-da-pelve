@@ -3,46 +3,74 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-  background-color: $white;
+  position: relative;
+  background: $white;
+
+  > img{
+    position: absolute;
+    width: 35rem;
+
+    &:nth-child(1){
+      top: -35rem;
+      right: 0;
+    }
+
+    &:nth-child(2){
+      bottom: -15rem;
+      width: 15rem;
+      left: 0;
+    }
+  }
 
   h2 {
     font-weight: 400;
     letter-spacing: 0.8rem;
-    font-size: 6.4rem;
+    font-size: 4.8rem;
     align-self: flex-start;
-    margin: 10rem 10rem 5rem;
+    margin: 10rem 15rem 5rem;
   }
 
   > div {
     display: flex;
     justify-content: space-between;
-    padding: 0 10rem;
+    padding: 0 15rem;
     width: 100%;
     flex-wrap: wrap;
+    z-index: 4;
 
-    div {
+    > div {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
       align-items: center;
       height: 55rem;
-      background: $primary;
+      background: $primary-alpha;
       border-radius: 1rem;
-      
-      img {
-        padding: 2rem;
-        width: 40rem;
-        border-radius: 1rem;
-      }
+      width: 34rem;
 
-      span {
-        font-size: 2.4rem;
-      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
+        img {
+          padding: 2rem;
+          width: 34rem;
+          border-radius: 1rem;
+        }
+
+        span {
+          max-width: 90%;
+          text-align: center;
+          font-size: 2.4rem;
+        }
+      }
       a {
         font-size: 2.4rem;
         color: $white;
-        padding: 2rem 8rem;
-        border-radius: 2rem;
+        padding: 1.4rem 5.5rem;
+        border-radius: 1.5rem;
         margin-bottom: 2rem;
         border: solid 2px $white;
         text-decoration: none;
@@ -63,28 +91,49 @@
       align-self: center;
     }
 
+    > img {
+      &:nth-child(1){
+        width: 20rem;
+        top: 0rem;
+        right: 0;
+      }
+  
+      &:nth-child(2){
+        width: 15rem;
+        bottom: 0rem;
+        left: 0;
+      }
+    }
+
     > div {
       flex-direction: column;
       padding: 0 4rem;
+      
+      > div {
+        width: 40rem;
+        height: 60rem;
+        align-self: center;
+        
+        & + div{
 
-      div {
-        height: 42rem;
-
-        & + div {
           margin-top: 2.5rem;
         }
 
-        span {
-          font-size: 2rem;
+        > div {
+
+          span {
+            font-size: 2.2rem;
+          }
+  
+          img {
+            width: 40rem;
+            padding: 3rem;
+          }
         }
 
-        img{
-          padding: 3rem;
-          width: 30rem;
-        }
-        
-        a{
-          padding: 1rem 6rem;
+        a {
+          padding: 1.5rem 6.5rem;
+          margin-bottom: 3rem;
           border-radius: 1.3rem;
         }
       }
