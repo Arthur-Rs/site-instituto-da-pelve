@@ -92,6 +92,10 @@ body main {
     span{
       font-size: 1.8rem;
       font-weight: 500;
+
+      @media (max-width: $mobile) {
+        font-size: 1.4rem;
+      }
     }
   }
 
